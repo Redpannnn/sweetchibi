@@ -856,3 +856,31 @@ export function BcaLogo({ className = "" }: { className?: string }) {
     </svg>
   );
 }
+
+/* ============================================================
+   SeaBank Logo (stylized wordmark — teal-blue rounded badge)
+   ============================================================ */
+export function SeabankLogo({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 110 36" className={className} aria-hidden="true">
+      <rect width="110" height="36" rx="8" fill="#0a7ea4" />
+      {/* wave accent */}
+      <g stroke="#fff" strokeWidth="2.4" fill="none" strokeLinecap="round">
+        <path d="M11 22.5 Q15.5 17 20 22.5 Q24.5 28 29 22.5" />
+        <path d="M14 16.5 Q18.5 11.5 23 16.5" opacity="0.7" />
+      </g>
+      <text
+        x="71"
+        y="24"
+        textAnchor="middle"
+        fontFamily="Arial, Helvetica, sans-serif"
+        fontSize="14.5"
+        fontWeight="bold"
+        letterSpacing="0.5"
+        fill="#fff"
+      >
+        SeaBank
+      </text>
+    </svg>
+  );
+}
