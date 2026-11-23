@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { BcaLogo } from "../decorations";
+import { SeabankLogo } from "../decorations";
 
 function useCopy() {
   const [copied, setCopied] = React.useState<string | null>(null);
@@ -20,7 +20,7 @@ function useCopy() {
 export function GiftSection() {
   const { copied, copy } = useCopy();
 
-  const account = { id: "adhy", name: "Adhy", number: "1234567890" };
+  const account = { id: "icha", name: "AISYAH PUTRI", number: "901087216732" };
 
   return (
     <section
@@ -47,12 +47,12 @@ export function GiftSection() {
           />
           {/* centered bank account content */}
           <div className="relative z-10 flex flex-col items-center justify-center gap-3 px-6 py-14">
-            <BcaLogo className="h-9 w-24 flex-shrink-0" />
+            <SeabankLogo className="h-9 w-28 flex-shrink-0" />
             <p className="font-hand text-3xl font-bold tracking-wider text-maroon">
               {account.number}
             </p>
             <p className="font-hand text-lg text-navy">
-              a/n {account.name}
+              a.n {account.name}
             </p>
             <button
               onClick={() => copy(account.number, account.id)}
