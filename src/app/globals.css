@@ -204,6 +204,26 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  /* Wedding-themed scrollbar (guestbook, long lists) */
+  .wedding-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .wedding-scrollbar::-webkit-scrollbar-track {
+    background: rgba(231, 184, 184, 0.25);
+    border-radius: 999px;
+  }
+  .wedding-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(160, 64, 80, 0.55);
+    border-radius: 999px;
+  }
+  .wedding-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(160, 64, 80, 0.75);
+  }
+  .wedding-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(160, 64, 80, 0.55) rgba(231, 184, 184, 0.25);
+  }
 }
 
 @keyframes fadeUp {
