@@ -30,3 +30,19 @@ model Post {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model Rsvp {
+  id        String   @id @default(cuid())
+  name      String
+  attendance String  // "hadir" | "tidak" | "ragu"
+  count     Int      @default(1)
+  message   String?
+  createdAt DateTime @default(now())
+}
+
+model Guest {
+  id        String   @id @default(cuid())
+  code      String   @unique
+  name      String
+  createdAt DateTime @default(now())
+}
