@@ -1,34 +1,36 @@
 "use client";
 
 import * as React from "react";
-import { HangingMandala, FlourishDivider, FlowerBorder, FlowerCluster } from "../decorations";
+import {
+  HangingMandala,
+  FlourishDivider,
+  FlowerBorder,
+  FlowerCluster,
+} from "../decorations";
 
-function useCountdown(target: number) {
-  const [now, setNow] = React.useState<number>(() => Date.now());
-  React.useEffect(() => {
-    const id = window.setInterval(() => setNow(Date.now()), 1000);
-    return () => clearInterval(id);
-  }, []);
-  const diff = Math.max(0, target - now);
-  const days = Math.floor(diff / 86400000);
-  const hours = Math.floor((diff % 86400000) / 3600000);
-  const minutes = Math.floor((diff % 3600000) / 60000);
-  const seconds = Math.floor((diff % 60000) / 1000);
-  return { days, hours, minutes, seconds };
-}
+const WA_NUMBER = "085183256967";
+const IG_URL = "https://www.instagram.com/memoraainvitation/";
+const TIKTOK_URL = "https://www.tiktok.com/@memoraainvtitation._.";
+
+/** Link WhatsApp langsung ke nomor (format internasional tanpa +). */
+const WA_LINK = `https://wa.me/62${WA_NUMBER.replace(/^0/, "")}`;
+
+type SocialLink = {
+  href: string;
+  icon: string;
+  alt: string;
+  label: string;
+  /** ukuran tampilan ikon (h & w dalam px) */
+  size: number;
+};
+
+const SOCIALS: SocialLink[] = [
+  { href: WA_LINK, icon: "/images/socmed-wa.png", alt: "WhatsApp MemoraA", label: "WhatsApp", size: 52 },
+  { href: IG_URL, icon: "/images/socmed-ig.png", alt: "Instagram MemoraA", label: "Instagram", size: 40 },
+  { href: TIKTOK_URL, icon: "/images/socmed-tiktok.png", alt: "TikTok MemoraA", label: "TikTok", size: 34 },
+];
 
 export function ClosingSection() {
-  // 20 Dec 2026, 08:00 WIB (Asia/Jakarta = UTC+7)
-  const target = React.useMemo(() => new Date("2026-12-20T08:00:00+07:00").getTime(), []);
-  const { days, hours, minutes, seconds } = useCountdown(target);
-
-  const units = [
-    { label: "Hari", value: days },
-    { label: "Jam", value: hours },
-    { label: "Menit", value: minutes },
-    { label: "Detik", value: seconds },
-  ];
-
   return (
     <section
       id="penutup"
@@ -48,32 +50,6 @@ export function ClosingSection() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-md text-center">
-        {/* countdown heading */}
-        <p className="font-hand text-xl text-navy">Menuju hari bahagia</p>
-        <h2 className="mt-1 font-hand text-3xl font-bold text-maroon">Counting the days</h2>
-
-        {/* countdown timer */}
-        <div className="mx-auto mt-6 grid max-w-sm grid-cols-4 gap-2">
-          {units.map((u) => (
-            <div
-              key={u.label}
-              className="flex flex-col items-center justify-center rounded-2xl bg-maroon py-3 text-cream shadow-md"
-            >
-              <span className="font-hand text-3xl font-bold leading-none">
-                {String(u.value).padStart(2, "0")}
-              </span>
-              <span className="mt-1 font-hand text-sm text-cream/90">
-                {u.label}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {/* divider */}
-        <div className="my-8">
-          <FlourishDivider className="h-10 w-full" />
-        </div>
-
         {/* thank you message */}
         <p className="font-hand text-2xl leading-snug text-maroon">
           Terima kasih atas kehadiran dan doa restu Anda.
@@ -95,7 +71,7 @@ export function ClosingSection() {
         {/* who invites */}
         <p className="font-hand text-xl text-navy">Kami yang berbahagia,</p>
         <p className="mt-3 font-display text-4xl text-maroon">
-          Adhy <span className="text-navy">&amp;</span> Diska
+          Bayu <span className="text-navy">&amp;</span> Icha
         </p>
         <p className="mt-2 font-hand text-lg text-navy">
           Beserta kedua keluarga
