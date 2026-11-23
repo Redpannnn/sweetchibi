@@ -29,13 +29,13 @@ export function SaveTheDateSection() {
           <div className="mx-auto my-3 flex h-44 w-44 items-center justify-center">
             <img
               src="/images/couple-savethedate.png"
-              alt="Ilustrasi Adhy dan Diska"
+              alt="Ilustrasi Bayu dan Icha"
               className="h-full w-full object-contain"
             />
           </div>
 
           <h3 className="font-hand text-4xl font-bold text-cream">
-            Adhy dan Diska
+            Bayu dan Icha
           </h3>
 
           <p className="mx-auto mt-4 max-w-[260px] text-center font-hand text-lg leading-snug text-cream/95">
@@ -51,15 +51,8 @@ export function SaveTheDateSection() {
             (Surah Ar-Rum:21)
           </p>
 
-          {/* music hint */}
-          <p className="mt-5 flex items-center justify-center gap-1 font-hand text-lg text-cream">
-            <span>Ketuk tombol</span>
-            <span aria-hidden>▶</span>
-            <span>untuk memutar musik!</span>
-          </p>
-
           {/* music player */}
-          <div className="mt-3">
+          <div className="mt-5">
             <WeddingMusicPlayer />
           </div>
         </ScallopedCard>
