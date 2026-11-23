@@ -16,16 +16,13 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  title: "Adhy & Diska - The Wedding",
-  description: "Undangan Pernikahan Adhy & Diska. 20 Desember 2026.",
-  keywords: ["undangan", "pernikahan", "wedding", "Adhy", "Diska"],
-  authors: [{ name: "Adhy & Diska" }],
-  icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
-  },
+  title: "Bayu & Icha - The Wedding",
+  description: "Undangan Pernikahan Bayu & Icha. 7 Desember 2026.",
+  keywords: ["undangan", "pernikahan", "wedding", "Bayu", "Icha"],
+  authors: [{ name: "Bayu & Icha" }],
   openGraph: {
-    title: "Adhy & Diska - The Wedding",
-    description: "Undangan Pernikahan Adhy & Diska. 20 Desember 2026.",
+    title: "Bayu & Icha - The Wedding",
+    description: "Undangan Pernikahan Bayu & Icha. 7 Desember 2026.",
     type: "website",
   },
 };
